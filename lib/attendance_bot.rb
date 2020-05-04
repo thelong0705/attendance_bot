@@ -18,12 +18,20 @@ module AttendanceBot
       email_field = login_form.fields.find { |f| f.name == 'employee_session_form[account_name_or_email]' }
       password_field = login_form.fields.find { |f| f.name == 'employee_session_form[password]' }
 
+      # TODO: get value from config file
       office_field.value = ''
       email_field.value = ''
       password_field.value = ''
 
 
-      agent.submit(login_form)
+      page = agent.submit(login_form)
+
+
+      clock_in_form = page.forms.first
+      user_time = clock_in_form.fields.find{ |f| f.name == 'web_time_recorder_form[user_time]' }
+      user_time.value = Time.now.to_s
+
+      clock_in_form.submit
     end
   end
 end
