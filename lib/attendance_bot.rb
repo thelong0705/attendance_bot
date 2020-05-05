@@ -4,6 +4,7 @@ require 'mechanize'
 require 'rubygems'
 require 'pry'
 require 'attendance_bot/version'
+require 'config'
 
 module AttendanceBot
   class Error < StandardError; end
@@ -18,10 +19,11 @@ module AttendanceBot
       email_field = login_form.fields.find { |f| f.name == 'employee_session_form[account_name_or_email]' }
       password_field = login_form.fields.find { |f| f.name == 'employee_session_form[password]' }
 
-      # TODO: get value from config file
-      office_field.value = ''
-      email_field.value = ''
-      password_field.value = ''
+      Config.load_and_set_settings('./config/config.yml')
+      binding.pry
+      office_field.value = Settings.office
+      email_field.value = Settings.email
+      password_field.value = Settings.password
 
 
       page = agent.submit(login_form)
