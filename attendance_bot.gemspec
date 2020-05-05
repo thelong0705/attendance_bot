@@ -35,4 +35,5 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'config'
   spec.add_dependency 'mechanize', '~> 2.7', '>= 2.7.5'
+  spec.add_dependency 'thor'
 end

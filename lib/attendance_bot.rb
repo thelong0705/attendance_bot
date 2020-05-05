@@ -20,7 +20,7 @@ module AttendanceBot
       password_field = login_form.fields.find { |f| f.name == 'employee_session_form[password]' }
 
       Config.load_and_set_settings('./config/config.yml')
-      binding.pry
+
       office_field.value = Settings.office
       email_field.value = Settings.email
       password_field.value = Settings.password

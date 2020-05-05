@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+require "bundler/setup"
+require 'attendance_bot/cli'
+AttendanceBot::CLI.start
