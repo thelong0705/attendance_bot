@@ -2,10 +2,10 @@ PATH
   remote: .
   specs:
     attendance_bot (0.3.0)
-      config
+      config (~> 2.2, >= 2.2.1)
       highline (~> 2.0, >= 2.0.3)
       mechanize (~> 2.7, >= 2.7.5)
-      thor
+      thor (~> 1.0, >= 1.0.1)
 
 GEM
   remote: https://rubygems.org/
@@ -100,7 +100,7 @@ PLATFORMS
 DEPENDENCIES
   attendance_bot!
   bundler (~> 2.0)
-  pry-byebug
+  pry-byebug (~> 3.9)
   rake (~> 10.0)
 
 BUNDLED WITH
