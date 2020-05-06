@@ -1,28 +1,27 @@
 # AttendanceBot
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/attendance_bot`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Learn how to make a gem by creating a bot to do my attendance
 
 ## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'attendance_bot'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
     $ gem install attendance_bot
 
 ## Usage
+First run below command and enter email and password for the bot to login attendance page
+```
+attendance_bot generate
+```
 
-TODO: Write usage instructions here
+To checkin
+
+```
+attendance_bot checkin
+```
+
+To checkout
+
+```
+attendance_bot checkout
+```
 
 ## Development
 
