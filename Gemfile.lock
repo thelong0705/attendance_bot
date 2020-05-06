@@ -3,6 +3,7 @@ PATH
   specs:
     attendance_bot (0.2.0)
       config
+      highline (~> 2.0, >= 2.0.3)
       mechanize (~> 2.7, >= 2.7.5)
       thor
 
@@ -57,6 +58,7 @@ GEM
       dry-equalizer (~> 0.2)
       dry-initializer (~> 3.0)
       dry-schema (~> 1.5)
+    highline (2.0.3)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     mechanize (2.7.6)

@@ -34,6 +34,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rake', '~> 10.0'
 
   spec.add_dependency 'config'
+  spec.add_dependency 'highline', '~> 2.0', '>= 2.0.3'
   spec.add_dependency 'mechanize', '~> 2.7', '>= 2.7.5'
   spec.add_dependency 'thor'
 end

@@ -1,6 +1,6 @@
 require 'thor'
-require 'attendance_bot'
-
+require 'attendance_bot/bot'
+require 'attendance_bot/generator'
 
 module AttendanceBot
   class CLI < Thor
@@ -17,6 +17,11 @@ module AttendanceBot
     desc 'checkout', 'checkout with current time'
     def checkout
       @bot.checkout
+    end
+
+    desc 'generate', 'Generates a config'
+    def generate
+      AttendanceBot::Generator.start
     end
   end
 end
