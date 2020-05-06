@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    attendance_bot (0.1.0)
+    attendance_bot (0.2.0)
       config
       mechanize (~> 2.7, >= 2.7.5)
       thor
